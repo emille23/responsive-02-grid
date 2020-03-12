@@ -7,7 +7,15 @@
 img {
   max-width: 100%;
 }
+/*////////////////////////////*/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 1rem;
 
+    margin: 1rem;
+    font-size: 1.5em;
+}
 .el {
     background: lightgray;
 
@@ -17,4 +25,12 @@ img {
             background: hsl(random(360), 50%, 50%);
         }
     }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 150px;
+    padding: 20px;
 }
