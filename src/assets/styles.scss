@@ -24,14 +24,14 @@ img {
 body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-rows: repeat(7, 150px);
+    grid-template-rows: repeat(7, 120px);
     grid-gap: 1rem;
 
     margin: 1rem;
-    font-size: 10px;
+    font-size: 1em;
 
     @include mod {
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 89px);
     }
 }
 .el {
