@@ -21,14 +21,29 @@ img {
         }
     }
 }
+@for $i from 57 through 71 {
+    .el--lanthanides:nth-child(#{$i}) {
+        grid-row: 9;
+        $add: $i - 57 + 4;
+        grid-column: $add;
+    }
+}
+@for $i from 89 through 103 {
+    .el--actinide:nth-child(#{$i}) {
+            grid-row: 10;
+            $add: $i - 89 + 4;
+            grid-column: $add;
+    }
+}
 body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-rows: repeat(7, 120px);
+    grid-template-rows: repeat(10, 80px);
     grid-gap: 1rem;
 
     margin: 1rem;
-    font-size: 1em;
+    font-size: 0.8em;
+    font-family: Tahoma;
 
     @include mod {
         grid-template-columns: repeat(18, 89px);
@@ -51,4 +66,9 @@ body {
 
     /*height: 150px;*/
     padding: 20px;
+}
+
+.el__symbol {
+    font-size: 1.6em;
+    font-weight: 500;
 }
