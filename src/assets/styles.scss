@@ -13,13 +13,22 @@ img {
         @content;
     }
 }
+@for $i from 1 through 7 {
+    @for $j from 1 through 18 {
+        .el[data-period="#{$i}"][data-group="#{$j}"] {
+            grid-row: $i;
+            grid-column: $j;
+        }
+    }
+}
 body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: repeat(7, 150px);
     grid-gap: 1rem;
 
     margin: 1rem;
-    font-size: 1.5em;
+    font-size: 10px;
 
     @include mod {
         grid-template-columns: repeat(18, 1fr);
@@ -40,6 +49,6 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    height: 150px;
+    /*height: 150px;*/
     padding: 20px;
 }
