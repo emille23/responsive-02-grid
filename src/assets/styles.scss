@@ -8,6 +8,11 @@ img {
   max-width: 100%;
 }
 /*////////////////////////////*/
+@mixin mod {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
 body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -15,6 +20,10 @@ body {
 
     margin: 1rem;
     font-size: 1.5em;
+
+    @include mod {
+        grid-template-columns: repeat(18, 1fr);
+    }
 }
 .el {
     background: lightgray;
